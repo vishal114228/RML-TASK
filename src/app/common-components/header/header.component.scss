@@ -1,0 +1,29 @@
+.toolbar {
+	margin: 0;
+	padding: 0;
+	.logout-icon {
+		text-decoration: none;
+		position: absolute;
+		right: 5%;
+	}
+	a:hover {
+		border-bottom: 2px solid wheat;
+		padding: 2px;
+	}
+}
+
+div {
+	margin-left: 5%;
+	a {
+		color:inherit;
+		text-decoration: none;
+	}
+}
+
+.mat-toolbar {
+	background-color: rgb(90, 88, 85);
+	color: wheat;
+}
+
+
+

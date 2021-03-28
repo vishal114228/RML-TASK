@@ -1,0 +1,59 @@
+<mat-card class="outer-container" *ngIf="userData">
+    <div class="container">
+        <div class="cancel-arrow">
+            <div (click)="onCancel()">
+                <span style="font-weight: bold;cursor: pointer;" class="material-icons">
+                    keyboard_backspace
+                </span>
+            </div>
+            <div class="text"> <span>USER DETAILS</span> </div>
+        </div>
+        <br>
+        <mat-card-header class="header-image">
+            <img mat-card-avatar [src]='userData.avatar' alt="USER IMAGE" />
+            <mat-card-title>{{userData.first_name +" "+ userData.last_name}}</mat-card-title>
+        </mat-card-header>
+        <br>
+        <table>
+            <tr>
+                <img class="main-image" [src]='userData.avatar' alt="USER IMAGE" />
+
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    <mat-label> <span> ID : </span></mat-label>
+                </td>
+                <td>
+                    {{userData.id}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-label> <span> First Name : </span></mat-label>
+                </td>
+                <td>
+                    {{userData.first_name}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-label> <span> Last Name : </span></mat-label>
+                </td>
+                <td>
+                    {{userData.last_name}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-label> <span> Email : </span></mat-label>
+                </td>
+                <td>
+                    {{userData.email}}
+                </td>
+            </tr>
+            <br>
+
+        </table>
+    </div>
+</mat-card>

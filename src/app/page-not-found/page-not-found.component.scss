@@ -1,0 +1,30 @@
+.container {
+    width: 50%;
+    margin-left: auto;
+    text-align: center;
+    margin-right: auto;
+    margin-top: 5%;
+    background-color: #1a4069;
+}
+
+.error-text {
+    padding: 5%;
+    color: #ff6000;
+    font-size: 50px;
+}
+
+.error-msg {
+    color: #ff6000;
+    margin-top: 2%;
+}
+
+.back-link {
+    color: #ff6000;
+    text-decoration: none;
+}
+
+@media  (max-width: 600px) {
+    .container {
+      width: 80%;
+    }
+  }

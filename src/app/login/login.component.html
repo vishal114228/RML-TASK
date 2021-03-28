@@ -1,0 +1,33 @@
+<div class="outer-container">
+    <div class="login-form-container">
+        <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+            <h3>Login</h3>
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Email" type="text" formControlName="email">
+                <mat-error *ngIf="loginForm.get('email').hasError('required')">
+                    Email is <b>Required</b>
+                </mat-error>
+                <mat-error *ngIf="loginForm.get('email').hasError('pattern')">
+                    Please Enter <b>valid</b> Email
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Password" type="password" formControlName="password">
+                <mat-error *ngIf="loginForm.get('password').hasError('required')">
+                    Password is <b>Required</b>
+                </mat-error>
+                <mat-error *ngIf="loginForm.get('password').hasError('pattern')">
+                    Password must be between <b>6 - 20 characters</b>
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-card-actions >
+                <button type="submit" [disabled]="!loginForm.valid" mat-raised-button class="submit-btn">Login</button>
+            </mat-card-actions>
+            <br>
+
+        </form>
+
+    </div>
+
+</div>

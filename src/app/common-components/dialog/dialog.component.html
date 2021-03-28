@@ -1,0 +1,5 @@
+<div mat-dialog-actions *ngIf="dialogType ==='confirmOperation'" style="justify-content: center">
+  <p class="title-text">{{title}}</p>
+  <button mat-button (click)="dialogRef.close('confirm')" cdkFocusInitial class="dialogBtnClass">Yes</button>
+  <button mat-button (click)="dialogRef.close('cancel')" class="dialogNoBtnClass">No</button>
+</div>

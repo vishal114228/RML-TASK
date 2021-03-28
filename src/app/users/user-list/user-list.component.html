@@ -1,0 +1,40 @@
+<div class="example-container">
+    <table class="table-class" mat-table [dataSource]="userList">
+        <!-- ID  -->
+        <ng-container matColumnDef="Id">
+            <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+        </ng-container>
+
+        <!--First Name  -->
+        <ng-container matColumnDef="First Name">
+            <mat-header-cell *matHeaderCellDef> FIRST NAME </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.first_name}} </mat-cell>
+        </ng-container>
+
+        <!-- Last Name  -->
+        <ng-container matColumnDef="Last Name">
+            <mat-header-cell *matHeaderCellDef> LAST NAME </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.last_name}} </mat-cell>
+        </ng-container>
+        <!-- Action -->
+        <ng-container matColumnDef="View User">
+            <mat-header-cell style="justify-content: center;" *matHeaderCellDef> VIEW USER </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <div>
+                    <div>
+                        <button mat-button #tooltip="matTooltip" matTooltip="CLICK TO VIEW USER DETAILS"
+                            class="iconClass" (click)="showUser(row)"><span class="material-icons">
+                                person_search
+                            </span></button>
+                    </div>
+                </div>
+            </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;">
+        </mat-row>
+    </table>
+    <mat-paginator class="table-class" [pageSizeOptions]="pageSizeOptions" [length]="totalUsers" [pageSize]="pageSize"
+        (page)="pageEvent = getNextPageUserData($event)"></mat-paginator>
+</div>

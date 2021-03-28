@@ -1,0 +1,54 @@
+.divWrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.icon {
+  width: 85px;
+  background: white;
+  border-radius: 50%;
+  margin-bottom: -45px;
+  z-index: 999;
+  span {
+    font-size: 85px;
+  }
+}
+
+.btn-ok{
+  width: 35%;
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: lawngreen;
+}
+
+.toast-container {
+  background-color: white;
+  z-index: 100;
+  width: 200px;
+  .toast-circle {
+    padding: 5% 10% 10% 10%;
+    margin-top: 20%;
+    text-align: center;
+    .body-text {
+      font-size: 18px;
+    }
+  }
+}
+ 
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+  cursor: pointer;
+}
+
+

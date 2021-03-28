@@ -1,0 +1,21 @@
+.dialogBtnClass {
+  background: white;
+  border: 2px solid black;
+  color: black;
+}
+.dialogBtnClass:hover {
+  background: black;
+  color: white;
+}
+.dialogNoBtnClass {
+  background-color: #ec3f45;
+  color: white;
+}
+.title-text {
+  font-weight: 600;
+  text-align: center;
+}
+
+.mat-dialog-actions{
+margin-bottom: 0px;
+}

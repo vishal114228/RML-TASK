@@ -1,0 +1,18 @@
+<div *ngIf="toastService.showToast" class="divWrapper"  [ngStyle]="getToastStyle()">
+  <div class="icon"  >
+    <span [ngStyle]="{color: iconColor}" class="material-icons">
+      {{iconClass}}
+      </span>
+  </div>
+  <div class="toast-container">
+    <div class="toast-circle">
+      <div class="body-text">
+        {{toastService.toastMessage | uppercase}}
+      </div>
+      <div style="padding: 5% 0% 0% 0%;">
+        <button (click)="hideToast()" class="btn-ok" >OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div (click)="hideToast()" *ngIf="toastService.showToast" class="overlay"></div>
